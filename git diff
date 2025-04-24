@@ -1,0 +1,35 @@
+[1mdiff --git a/lib/custom_button.dart b/lib/custom_button.dart[m
+[1mindex e69de29..e85c0c5 100644[m
+[1m--- a/lib/custom_button.dart[m
+[1m+++ b/lib/custom_button.dart[m
+[36m@@ -0,0 +1,30 @@[m
+[32m+[m[32mimport 'package:flutter/material.dart';[m
+[32m+[m
+[32m+[m[32mclass CustomButton extends StatefulWidget {[m
+[32m+[m[32m  const CustomButton({super.key});[m
+[32m+[m
+[32m+[m[32m  @override[m
+[32m+[m[32m  State<CustomButton> createState() => _CustomButtonState();[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mclass _CustomButtonState extends State<CustomButton>[m
+[32m+[m[32m    with SingleTickerProviderStateMixin {[m
+[32m+[m[32m  late AnimationController _controller;[m
+[32m+[m
+[32m+[m[32m  @override[m
+[32m+[m[32m  void initState() {[m
+[32m+[m[32m    super.initState();[m
+[32m+[m[32m    _controller = AnimationController(vsync: this);[m
+[32m+[m[32m  }[m
+[32m+[m
+[32m+[m[32m  @override[m
+[32m+[m[32m  void dispose() {[m
+[32m+[m[32m    _controller.dispose();[m
+[32m+[m[32m    super.dispose();[m
+[32m+[m[32m  }[m
+[32m+[m
+[32m+[m[32m  @override[m
+[32m+[m[32m  Widget build(BuildContext context) {[m
+[32m+[m[32m    return ElevatedButton(child: Text("dsadasdwa"), onPressed: () {});[m
+[32m+[m[32m  }[m
+[32m+[m[32m}[m
