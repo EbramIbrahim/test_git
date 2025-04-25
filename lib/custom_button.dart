@@ -25,6 +25,13 @@ class _CustomButtonState extends State<CustomButton>
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(child: Text("dsadasdwa"), onPressed: () {});
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.red,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      ),
+      child: Text("dsadasdwa"),
+      onPressed: () {},
+    );
   }
 }
